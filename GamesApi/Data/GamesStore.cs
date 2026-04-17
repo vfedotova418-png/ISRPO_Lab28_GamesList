@@ -2,7 +2,7 @@ using GamesApi.Models;
 namespace GamesApi.Data;
 
 public static class GamesStore {
-    private static int _nextId = 4;
+    private static int _nextId = 5;
     public static List<Game> Games { get; } = new() {
         new Game {
             Id = 1,
@@ -21,6 +21,13 @@ public static class GamesStore {
             Title = "Grand Theft Auto: San Anreas",
             Genre = "Action-adventure",
             ReleaseYear = 2004,
+        },
+        new Game {
+            Id = 4,
+            Title = "Hollow Knight: Silksong ",
+            Genre = "Metroidvania",
+            ReleaseYear = 2025,
+            IsFavourite = true,
         },
     };
     public static int NextId() => _nextId++;
